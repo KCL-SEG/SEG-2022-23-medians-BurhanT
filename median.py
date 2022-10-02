@@ -9,4 +9,12 @@ while True:
         print("Some input could not be converted to a number!")
     else:
         break
-print(numbers)
+
+numbers = sorted(numbers)
+numbSize = len(numbers)
+if numbSize%2==0:
+    Median = (numbers[numbSize//2] + numbers[(numbSize//2) - 1]) / 2
+else:
+    Median = numbers[numbSize//2]
+
+print(Median)
